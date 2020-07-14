@@ -10,15 +10,16 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/style.css" />
 </head>
 
 <body>
-    <header class="bg-info text-light">
+    <header class="bg-main text-light">
         <div class="row justify-content-between">
-        <h1 class="pl-5">Gregslist</h1>
-        <a href="index.html"><h1>Cars</h1></a>
-        <a href="houses.html"><h1>Houses</h1></a>
-        <a href="jobs.html"><h1 class="pr-5">Jobs</h1></a>
+        <a href="index.html"><h1 class="pl-5 text-white">Gregslist</h1></a>
+        <a href="index.html"><h2 class="text-white">Cars</h2></a>
+        <a href="houses.html"><h2 class="text-white">Houses</h2></a>
+        <a href="jobs.html"><h2 class="text-white pr-5">Jobs</h2></a>
     </div>
     </header>
 
@@ -26,9 +27,9 @@
 
     
     <main class="container-fluid">
-        <div id="form" class="row justify-content-center pb-5">
+        <div id="form" class="row justify-content-center pb-5 pt-3">
             <div class="col-12 text-center">
-                <h5>Add A House!</h5>
+                <h2>Add A House!</h2>
             </div>
             <form onsubmit="app.housesController.addHouse(event)" class="col-8">
                 <div class="form-group">
@@ -63,7 +64,7 @@
                 <button class="btn btn-primary btn-block" type="submit">Submit</button>
             </form>
         </div>
-        <div id="houses" class="row">
+        <div id="houses" class="row justify-content-center">
             <!-- <div class="col-3 border rounded shadow">
                 <h1>make</h1>
                 <h1>model</h1>

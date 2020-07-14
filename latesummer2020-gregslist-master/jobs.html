@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+    <header class="bg-main text-light">
+        <div class="row justify-content-between">
+            <a href="index.html"><h1 class="pl-5 text-white">Gregslist</h1></a>
+        <a href="index.html"><h2 class="text-white">Cars</h2></a>
+        <a href="houses.html"><h2 class="text-white">Houses</h2></a>
+        <a href="jobs.html"><h2 class="text-white pr-5">Jobs</h2></a>
+    </div>
+    </header>
+
+
+
+    
+    <main class="container-fluid">
+        <div id="form" class="row justify-content-center pb-5 pt-3">
+            <div class="col-12 text-center">
+                <h2>Add A Job!</h2>
+            </div>
+            <form onsubmit="app.jobsController.addJob(event)" class="col-8">
+                <div class="form-group">
+                    <label for="jobTitle">Title</label>
+                    <input type="text" name="jobTitle" class="form-control" placeholder="Enter Title...">
+                </div>
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" name="company" class="form-control" placeholder="Enter Company...">
+                </div>
+                <div class="form-group">
+                    <label for="rate">Salary</label>
+                    <input type="number" min="1" name="rate" class="form-control"
+                        placeholder="Enter Salary...">
+                </div>
+                <div class="form-group">
+                    <label for="hours">Hours</label>
+                    <input type="number" min="1" name="hours" class="form-control"
+                        placeholder="Enter Hours...">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" name="description" class="form-control" placeholder="Enter Description...">
+                </div>
+                <button class="btn btn-primary btn-block" type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="jobs" class="row justify-content-center">
+            <!-- <div class="col-3 border rounded shadow">
+                <h1>make</h1>
+                <h1>model</h1>
+                <h1>year</h1>
+                <h1>price</h1>
+                <h1>image</h1>
+            </div> -->
+        </div>
+    </main>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="app/main.js" type="module"></script>
+</body>
+
+</html>

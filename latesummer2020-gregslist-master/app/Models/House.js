@@ -12,15 +12,16 @@ export default class House {
 
   get Template() {
       return `
-          <div class="col-3 border rounded shadow">
-              <h1>${this.bedrooms} Bed/${this.bathrooms} Bath</h1>
-              <h1>${this.price}</h1>
-              <h1>${this.year}</h1>
-              <h1>${this.levels}</h1>
-              <img class="img-fluid" src="${this.imgUrl}"/>
-              <h1>${this.description}</h1>
-              <button class="btn btn-danger" onclick="app.housesController.deleteHouse('${this.id}')">Delete</button>
-              <button class="btn btn-info" onclick="app.housesController.bidOnHouse('${this.id}')">Bid</button>
+          <div class="col-3 border rounded shadow bg-main m-4 p-3">
+              <h2>${this.bedrooms} Bed/${this.bathrooms} Bath</h2>
+              <img class="img-fluid" src="${this.imgUrl}" style="max-height:200px;"/>
+              <h5>Price: ${this.price}</h5>
+              <h5>Year Built: ${this.year}</h5>
+              <h5>Levels: ${this.levels}</h5>
+              
+              <h5>Description: ${this.description}</h5>
+              <button class="btn btn-danger ml-3 mr-3" onclick="app.housesController.deleteHouse('${this.id}')">Delete</button>
+              <button class="btn btn-info ml-3 mr-3" onclick="app.housesController.bidOnHouse('${this.id}')">Bid</button>
 
           </div>
           `

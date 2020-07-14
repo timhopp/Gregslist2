@@ -12,16 +12,14 @@ export default class Car {
 
     get Template() {
         return `
-            <div class="col-3 border rounded shadow">
-                <h1>${this.make}</h1>
-                <input type="text" name="make" class="form-control" placeholder="Enter Make..." value="${this.make}">
-                <h1>${this.model}</h1>
-                <h1>${this.year}</h1>
-                <h1>${this.price}</h1>
-                <img class="img-fluid" src="${this.imgUrl}"/>
-                <h1>${this.description}</h1>
-                <button class="btn btn-danger" onclick="app.carsController.deleteCar('${this.id}')">Delort</button>
-                <button class="btn btn-info" onclick="app.carsController.bidOnCar('${this.id}')">Bid</button>
+            <div class="col-3 border rounded shadow m-4 p-3 bg-main">
+                <h2>${this.make} - ${this.model} </h2>
+                <img class="img-fluid" src="${this.imgUrl}" style="max-height:200px;"/>
+                <h5>Year: ${this.year}</h5>
+                <h5>Price: ${this.price}</h5>
+                <h5>Description: ${this.description}</h5>
+                <button class="btn btn-danger ml-3 mr-3" onclick="app.carsController.deleteCar('${this.id}')">Delort</button>
+                <button class="btn btn-info ml-3 mr-3" onclick="app.carsController.bidOnCar('${this.id}')">Bid</button>
 
             </div>
             `
